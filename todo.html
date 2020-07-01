@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="todo.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container" style="position: relative;width:450px;height:630px;border:2px solid black;top:50px;">
+      <h1 style="text-align:center">TO DO LIST</h1>
+      <div class="banner">
+        <img style="position: relative;max-width:32px;left:89% ;" src="img/update.png" alt="refresh" onclick="refresh()">
+        <img style="position: relative;width:26em;height:12em;border-radius:20px;" src="img/banner.jpg" alt="Banner">
+        <div id="date">
+        <script type="text/javascript">
+        let dat = document.getElementById('date');
+        dat.innerText = new Date();
+        </script>
+
+        </div>
+      </div>
+<br>
+      <div class="add-item">
+        <input type="text" class="insert"id="item" placeholder="Add Item to your list"> &nbsp
+        <img src="img/plus.png" alt="plus" id="plus"onclick="add()">
+      </div>
+      <div class="content" >
+        <ol id="list">
+
+        </ol>
+      </div>
+      <footer>
+<p style="margin-left:30%;">By Harshith kumar</p>
+      </footer>
+    </div>
+    <script type="text/javascript">
+    var listnode = document.getElementById('list');
+
+      function add()
+      {
+
+        var textval = document.getElementById('item').value;
+      var  linode = document.createElement("li"),
+        delbtn = document.createElement("button"),
+        finishbtn = document.createElement("button"),
+        txtnode = document.createTextNode(textval);
+        if( textval == ""){
+
+        }else {
+
+            delbtn.innerText = "Delete";
+            delbtn.className = "btn btn-primary";
+            finishbtn.innerText = "Finish";
+            finishbtn.className = "btn btn-primary";
+            linode.appendChild(txtnode);
+            linode.appendChild(delbtn);
+            linode.appendChild(finishbtn);
+            listnode.appendChild(linode);
+
+            delbtn.addEventListener('click', () =>{
+              linode.removeChild(txtnode);
+              linode.removeChild(delbtn);
+              linode.removeChild(finishbtn)
+              linode.remove();
+
+            });
+
+            finishbtn.addEventListener('click', () =>{
+              linode.removeChild(delbtn);
+              linode.removeChild(finishbtn);
+              const comp = document.createElement("b");
+              comp.className = "compl";
+              comp.innerText = " Completed  ";
+              linode.appendChild(comp);
+              var verified = document.createElement("img");
+              verified.className = "veri";
+              verified.src = "img/correct.png";
+              linode.appendChild(verified);
+            });
+          }
+
+
+
+
+
+    }
+
+    function refresh(){
+      location.reload();
+      textval = document.getElementById('item').value = "";
+    }
+
+
+
+
+    </script>
+
+  </body>
+</html>

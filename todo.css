@@ -1,0 +1,63 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #f1ece8;
+}
+
+.container{
+  border-radius: 5%;
+  background-color: #605d5d;
+}
+
+h1{
+  font-family: serif;
+
+}
+
+button{
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+
+  li{
+    font-size: 18px;
+    font-style:normal;
+  margin-left: 5px;
+  font-family:fantasy;
+  }
+
+#item{
+  width:87%;
+  height: 50px;
+  border-radius: 10px;
+}
+
+#date{
+  font-family: serif;
+  position: absolute;
+  top: 35%;
+  font-size: 20px;
+}
+
+.veri{
+  max-width: 15px;
+}
+
+.compl{
+  margin-left: 60%;
+}
+
+.content{
+  width:410px;
+  height: 250px;
+  overflow: auto;
+}
+
+.txt{
+  font-family: sans-serif;
+}
