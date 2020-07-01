@@ -4,12 +4,12 @@
 }
 
 body{
-  background-color: #f1ece8;
+  background-color: #c17979;
 }
 
 .container{
   border-radius: 5%;
-  background-color: #605d5d;
+  background-color: #a9a6a6;
 }
 
 h1{
@@ -32,7 +32,7 @@ button{
   }
 
 #item{
-  width:87%;
+  width:89%;
   height: 50px;
   border-radius: 10px;
 }
@@ -40,8 +40,9 @@ button{
 #date{
   font-family: serif;
   position: absolute;
-  top: 35%;
-  font-size: 20px;
+  top: 12%;
+  color: white;
+
 }
 
 .veri{
@@ -49,7 +50,7 @@ button{
 }
 
 .compl{
-  margin-left: 60%;
+  margin-left: 53%;
 }
 
 .content{
