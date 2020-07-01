@@ -84,12 +84,12 @@
               linode.appendChild(verified);
             });
           }
-
-
-
-
-
+}
+document.getElementById('item').onkeydown = function(event) {
+    if (event.keyCode == 13) {
+      add();
     }
+}
 
     function refresh(){
       location.reload();
