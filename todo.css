@@ -20,7 +20,8 @@ h1{
 button{
   margin-top: 5px;
   margin-right: 5px;
-  margin-left: 10px;
+  margin-left: 4px;
+
 }
 
 
@@ -50,7 +51,7 @@ button{
 }
 
 .compl{
-  margin-left: 53%;
+  margin-left: 25%;
 }
 
 .content{
@@ -61,4 +62,9 @@ button{
 
 .txt{
   font-family: sans-serif;
+}
+
+.del-logo{
+  position: relative;
+  left: 75%
 }

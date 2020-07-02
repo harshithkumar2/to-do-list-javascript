@@ -50,6 +50,15 @@
         delbtn = document.createElement("button"),
         finishbtn = document.createElement("button"),
         txtnode = document.createTextNode(textval);
+        var comp = document.createElement("b");
+        comp.className = "compl";
+        comp.innerText = " Completed  ";
+        var delogo = document.createElement("img");
+        delogo.src = "img/trash.png";
+        delogo.className = "del-logo";
+        var verified = document.createElement("img");
+        verified.className = "veri";
+        verified.src = "img/correct.png";
         if( textval == ""){
 
         }else {
@@ -74,17 +83,25 @@
             finishbtn.addEventListener('click', () =>{
               linode.removeChild(delbtn);
               linode.removeChild(finishbtn);
-              const comp = document.createElement("b");
-              comp.className = "compl";
-              comp.innerText = " Completed  ";
+
+              linode.appendChild(delogo);
+
               linode.appendChild(comp);
-              var verified = document.createElement("img");
-              verified.className = "veri";
-              verified.src = "img/correct.png";
+
               linode.appendChild(verified);
+
             });
-          }
+
+            delogo.addEventListener('click', () =>{
+              linode.removeChild(txtnode);
+              linode.removeChild(delogo);
+              linode.removeChild(comp);
+              linode.removeChild(verified);
+              linode.remove();
+            });
+        }
 }
+
 document.getElementById('item').onkeydown = function(event) {
     if (event.keyCode == 13) {
       add();
